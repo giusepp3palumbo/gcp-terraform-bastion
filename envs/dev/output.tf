@@ -3,5 +3,5 @@ output "network_id" {
 }
 
 output "project" {
-  value = module.subnet-svizzera.project
+  value = module.subnet-swiss.project
 }

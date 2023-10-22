@@ -9,3 +9,7 @@ variable "name" {
 variable "network" {
 
 }
+
+variable "subnet" {
+
+}

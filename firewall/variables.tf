@@ -1,0 +1,8 @@
+variable "network" {
+
+}
+
+
+variable "cidr" {
+
+}
