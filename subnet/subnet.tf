@@ -4,8 +4,9 @@ data "google_client_config" "current" {
 
 
 resource "google_compute_subnetwork" "subnet" {
-  project       = data.google_client_config.current.project
+  provider      = google.dst
   network       = var.network
   name          = var.subnet_name
+  region        = data.google_client_config.current.region
   ip_cidr_range = var.cidr[data.google_client_config.current.region]
 }
