@@ -1,3 +1,26 @@
+
+
+First, autenticate with your Google Account. There are several options:
+
+https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_reference#authentication
+
+When Google show for auth credentials, follows this order:
+
+https://cloud.google.com/docs/authentication/application-default-credentials
+
+
+In this example I create a new service account in the IAM section of the GCP and saved it on this folder. I called it service-account-terraform.json.
+
+```
+export GOOGLE_APPLICATION_CREDENTIALS=service-account-terraform.json
+```
+
+
+```
+terraform init
+```
+
+
 Each input variable accepted by a module must be declared using a variable block:
 https://developer.hashicorp.com/terraform/language/values/variables#declaring-an-input-variable
 
