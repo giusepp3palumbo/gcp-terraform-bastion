@@ -1,0 +1,8 @@
+variable "role" {
+
+}
+
+variable "member" {
+
+}
+

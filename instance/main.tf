@@ -1,4 +1,4 @@
-resource "google_compute_instance" "vm-micro" {
+resource "google_compute_instance" "my_vm" {
   provider     = google.dst
   name         = var.name
   machine_type = var.machine_type
@@ -11,12 +11,17 @@ resource "google_compute_instance" "vm-micro" {
   }
 
   network_interface {
-    network = var.network
+    network    = var.network
     subnetwork = var.subnet
 
     access_config {
       // Ephemeral public IP
     }
+  }
+
+  service_account {
+    email = var.sa_email
+    scopes = ["cloud-platform"]
   }
 
   allow_stopping_for_update = true
