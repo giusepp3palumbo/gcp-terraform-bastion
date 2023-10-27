@@ -1,7 +1,9 @@
 
 # What is that
 
-This project is a demonstration of using terraform provider aliasing and modular resource layout to do work in multiple GCP regions within a single terraform project. 
+This project is a demonstration of using Terraform provider aliasing and modular resource layout to do work in multiple GCP regions within a single terraform project. 
+
+[GCP Architecture with Bastian Host](https://github.com/giusepp3palumbo/terraform/blob/main/img/hld.png)
 
 # How to launch
 
@@ -37,6 +39,25 @@ To apply the changes:
 ```
 terraform apply
 ```
+
+
+## Principal covered themes
+
+### Google Cloud Platform (GCP)
+
+These resources are used:
+* Virtual Private Cloud [doc](https://cloud.google.com/vpc/docs/overview)
+* Google Cloud Engine [doc](https://cloud.google.com/compute/docs/instances)
+* 
+* 
+
+The architectural pattern used:
+* **Bastion Host**: to avoid the exposure of all VMs on external network, you can expose only one VM, called Bastion Host, from which you can connect to others VMs [doc](https://cloud.google.com/compute/docs/connect/ssh-using-bastion-host). On the official [terraform-google-modules](https://github.com/terraform-google-modules/terraform-google-bastion-host/tree/master) git page you can find more Terraform example about that.
+
+
+### Terraform
+
+
 
 # How it works
 

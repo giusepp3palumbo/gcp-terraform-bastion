@@ -61,6 +61,7 @@ module "bastian_host_dev" {
   network         = module.mynetwork.network_id
   subnet          = module.subnet-swiss.subnet_id
   sa_email = module.bastian_host_sa_dev.sa_email
+  ext_ip = true
 }
 
 module "web_server_dev_a" {

@@ -14,8 +14,11 @@ resource "google_compute_instance" "my_vm" {
     network    = var.network
     subnetwork = var.subnet
 
-    access_config {
-      // Ephemeral public IP
+    dynamic "access_config" {
+      for_each = var.ext_ip ? [""] : []
+      content {
+
+      }
     }
   }
 
