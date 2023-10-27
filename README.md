@@ -5,6 +5,11 @@ This project is a demonstration of using Terraform provider aliasing and modular
 
 ![GCP Architecture with Bastian Host](https://github.com/giusepp3palumbo/terraform/blob/main/img/hld.png?raw=true)
 
+# How it Works
+
+In the root directory you can find the "main.tf" file in which you can choose which environment (dev/prod) to provision. The environments are configured in the module under the folder "envs". Currently only "dev" environment is populated. Inside ./envs/dev/main.tf you can find all the definitions of modules to create the gcp resources.
+
+
 # Before you launch
 
 You need to be autenticated in gcloud to launch Terraform. 
