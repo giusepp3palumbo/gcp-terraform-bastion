@@ -3,7 +3,7 @@
 
 This project is a demonstration of using Terraform provider aliasing and modular resource layout to do work in multiple GCP regions within a single terraform project. 
 
-[GCP Architecture with Bastian Host](https://github.com/giusepp3palumbo/terraform/blob/main/img/hld.png?raw=true)
+![GCP Architecture with Bastian Host](https://github.com/giusepp3palumbo/terraform/blob/main/img/hld.png?raw=true)
 
 # How to launch
 
