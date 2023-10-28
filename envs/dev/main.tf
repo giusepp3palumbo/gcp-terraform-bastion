@@ -35,7 +35,7 @@ module "bastian_host_iam1_dev" {
     google.dst = google.europe-west6
   }
   source = "../../IAM"
-  role = "roles/compute.osLogin"
+  role   = "roles/compute.osLogin"
   member = format("serviceAccount:%s", module.bastian_host_sa_dev.sa_email)
 }
 
@@ -44,7 +44,7 @@ module "bastian_host_iam2_dev" {
     google.dst = google.europe-west6
   }
   source = "../../IAM"
-  role = "roles/batch.serviceAgent"
+  role   = "roles/batch.serviceAgent"
   member = format("serviceAccount:%s", module.bastian_host_sa_dev.sa_email)
 }
 
@@ -55,13 +55,13 @@ module "bastian_host_dev" {
   providers = {
     google.dst = google.europe-west6-a
   }
-  source          = "../../instance"
-  name            = "bastian-host-dev"
-  machine_type    = "f1-micro"
-  network         = module.mynetwork.network_id
-  subnet          = module.subnet-swiss.subnet_id
-  sa_email = module.bastian_host_sa_dev.sa_email
-  ext_ip = true
+  source        = "../../instance"
+  name          = "bastian-host-dev"
+  machine_type  = "f1-micro"
+  network       = module.mynetwork.network_id
+  subnet        = module.subnet-swiss.subnet_id
+  sa_email      = module.bastian_host_sa_dev.sa_email
+  ext_ip        = true
   label_vm_type = "bastion"
   label_vm_env  = "dev"
 }
@@ -70,12 +70,12 @@ module "web_server_dev_a" {
   providers = {
     google.dst = google.europe-west6-a
   }
-  source          = "../../instance"
-  name            = "web-server-dev-a"
-  machine_type    = "f1-micro"
-  network         = module.mynetwork.network_id
-  subnet          = module.subnet-swiss.subnet_id
-  sa_email = module.bastian_host_sa_dev.sa_email
+  source        = "../../instance"
+  name          = "web-server-dev-a"
+  machine_type  = "f1-micro"
+  network       = module.mynetwork.network_id
+  subnet        = module.subnet-swiss.subnet_id
+  sa_email      = module.bastian_host_sa_dev.sa_email
   label_vm_type = "web"
   label_vm_env  = "dev"
 }

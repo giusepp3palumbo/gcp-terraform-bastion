@@ -27,7 +27,7 @@ resource "google_compute_instance" "my_vm" {
   }
 
   service_account {
-    email = var.sa_email
+    email  = var.sa_email
     scopes = ["cloud-platform"]
   }
 
