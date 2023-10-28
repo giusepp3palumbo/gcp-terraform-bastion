@@ -7,6 +7,10 @@ resource "google_compute_instance" "my_vm" {
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-12"
+      labels = {
+        env  = var.label_vm_env
+        type = var.label_vm_type
+      }
     }
   }
 

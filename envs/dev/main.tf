@@ -62,6 +62,8 @@ module "bastian_host_dev" {
   subnet          = module.subnet-swiss.subnet_id
   sa_email = module.bastian_host_sa_dev.sa_email
   ext_ip = true
+  label_vm_type = "bastion"
+  label_vm_env  = "dev"
 }
 
 module "web_server_dev_a" {
@@ -74,6 +76,8 @@ module "web_server_dev_a" {
   network         = module.mynetwork.network_id
   subnet          = module.subnet-swiss.subnet_id
   sa_email = module.bastian_host_sa_dev.sa_email
+  label_vm_type = "web"
+  label_vm_env  = "dev"
 }
 
 # module "web_server_dev_b" {
