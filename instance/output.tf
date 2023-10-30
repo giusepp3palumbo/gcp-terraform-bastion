@@ -1,7 +1,7 @@
-output "vm_ip" {
-  value = google_compute_instance.my_vm.network_interface.0.network_ip
+output "bastion_host_ip" {
+  value = google_compute_instance_from_template.bastion_host.network_interface.0.network_ip
 }
 
-output "vm_name" {
-  value = google_compute_instance.my_vm.name
+output "web_server_ip" {
+  value = google_compute_instance_from_template.web-server.network_interface.0.network_ip
 }

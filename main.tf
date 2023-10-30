@@ -1,15 +1,10 @@
-
-
-module "dev-env" {
+module "dev_env_europe_west6_a" {
   source = "./envs/dev"
   cidr   = var.cidr
   providers = {
-    google.europe-west6   = google.europe-west6
-    google.europe-west6-a = google.europe-west6-a
-    google.europe-west6-b = google.europe-west6-b
+    google.dst  = google.europe-west6-a
   }
 }
-
 
 
 # module "prod-env" {

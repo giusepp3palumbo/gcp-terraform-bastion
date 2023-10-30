@@ -1,11 +1,7 @@
-output "network_id" {
-  value = module.dev-env.network_id
+output "bastion_host_ip" {
+  value = module.dev_env_europe_west6_a.bastion_host_ip
 }
 
-output "project" {
-  value = module.dev-env.project
-}
-
-output "bastian_host_ip" {
-  value = module.dev-env.bastian_host_ip
+output "web_server_ip" {
+  value = module.dev_env_europe_west6_a.web_server_ip
 }
