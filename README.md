@@ -7,7 +7,7 @@ This project is a demonstration of using Terraform provider aliasing and modular
 
 # How it Works
 
-In the root directory you can find the "main.tf" file in which you can choose which environment (dev/prod) to provision. The environments are configured in the module under the folder "envs". Currently only "dev" environment is populated. Inside ./envs/dev/main.tf you can find all the definitions of modules to create the gcp resources.
+You should launch terraform from /envs/(dev/prod)/ folder to provision your resources. Inside ./envs/dev/main.tf you can find a folder for each region, in which there are all the definitions of modules to create the gcp resources.
 
 
 # Before you launch
