@@ -1,3 +1,7 @@
+variable "project" {
+
+}
+
 variable "role" {
 
 }
